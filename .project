@@ -3,6 +3,7 @@
 	<name>ActorPatterns2019</name>
 	<comment></comment>
 	<projects>
+		<project>Paths</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

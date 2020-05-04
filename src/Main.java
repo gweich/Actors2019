@@ -6,9 +6,9 @@ import weichhart.georg.actor.DirectoryFacilitator;
 import weichhart.georg.actor.OrderActor;
 import weichhart.georg.actor.PlotterActor;
 import weichhart.georg.actor.TransportActor;
-import weichhart.georg.path.Dijkstra;
-import weichhart.georg.path.Edge;
-import weichhart.georg.path.Node;
+import weichhart.georg.dijkstra.Dijkstra;
+import weichhart.georg.dijkstra.Edge;
+import weichhart.georg.dijkstra.Node;
 
 public class Main {
 	
