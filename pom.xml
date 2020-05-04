@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Weichhart.Georg</groupId>
   <artifactId>ActorPatterns2019</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>Patterns1</name>
   <repositories>
     <repository>
