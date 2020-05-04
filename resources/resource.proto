@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package Weichhart.Georg;
+
+option java_package = "weichhart.georg.communication";
+option java_outer_classname = "ResourceMessages";
+
+//fields are optional by default - do not use
+// required is not allowed in proto3
+
+message Resource {
+	string address = 1;
+	string service = 2;
+	int32 positionX = 3;
+	int32 positionY = 4;
+	
+	enum States{
+		STATE_UNKOWN = 0;
+		STATE_RUNNING = 1;
+		STATE_IDLE = 2;
+		STATE_RESERVED = 3;
+		STATE_SHUTTING_DOWN = 10;
+		STATE_DEAD = 11;
+		STATE_ERROR = 12;
+	}
+	
+	States state = 5;
+}
+
+message Plotter {
+	Resource res = 1; 
+	int32 color = 2;
+}
+
+message Transport {
+	Resource res = 1;
+	// N=1; E=2; S=3; W=4; 
+	int32 direction = 2;
+}
+
+message ResourcePath {
+	repeated Resource Path = 1; 
+}

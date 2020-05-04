@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package Weichhart.Georg;
+
+option java_package = "weichhart.georg.communication";
+option java_outer_classname = "PerformativeMessages";
+
+// fields are optional by default 
+
+message Message {
+  enum PerformativeType {
+    UNKNOWN = 0;
+    INFOM = 1;
+    INFORM_IF = 2;
+    REQUEST = 3;
+    REQUEST_WHEN = 4;
+    REQUEST_WHENEVER = 5;
+    QUERY = 6;
+    QUERY_IF = 7;
+    AGREE = 8;
+    CONFIRM = 9;
+    DISCONFIRM = 10;
+    
+    SUBSCRIBE = 18;
+    UNSUBSCRIBE = 19;
+    
+    CALL_FOR_PROPOSAL = 20;
+    PROPOSE = 21;
+    ACCEPT_PROPOSAL = 22;
+    REJECT_PROPOSAL = 23;
+    
+    CANCEL = 30;
+    REFUSE = 31;
+    NOT_UNDERSTOOD = 32;
+	FAILURE = 33; 
+    WARN = 34;
+    ERROR = 35;
+  }
+
+  PerformativeType performative = 1;
+  string txt = 2;
+  string subject = 3;
+  string source = 4;
+}
+

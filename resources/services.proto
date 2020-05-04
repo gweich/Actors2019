@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package Weichhart.Georg;
+
+option java_package = "weichhart.georg.communication";
+option java_outer_classname = "CommunicationServices";
+
+option java_generic_services = false;
+//if yes: the generated code may be undesirable as it is not tied to any particular RPC system, and thus requires more levels of indirection than code tailored to one system
+
+
+import "message.proto";
+import "resource.proto";
+
+//fields are optional by default - do not use
+//required is not allowed
+
+//
+
+service ResourceStatus {
+  rpc GetStatus(Message) returns(Resource);
+}
+
+service StatusChanged {
+  rpc StatusEvent(Message) returns(Message);
+}
