@@ -7,7 +7,7 @@
   <repositories>
     <repository>
 		<id>github</id>
-        <name>GitHub Apache Maven Packages</name>
+        <name>GitHub Apache Maven Packages Paths</name>
         <url>https://maven.pkg.github.com/gweich/Paths</url>    
      </repository>
   </repositories>

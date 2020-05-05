@@ -10,6 +10,7 @@ import weichhart.georg.communication.ResourceMessages;
 import weichhart.georg.communication.ResourceMessages.Resource;
 import weichhart.georg.dijkstra.Dijkstra;
 import weichhart.georg.dijkstra.Node;
+import weichhart.georg.minHeap.AbstractNode;
 
 public class TransportOptimizeActor extends AbstractActor {
 	Resource start;
@@ -26,11 +27,11 @@ public class TransportOptimizeActor extends AbstractActor {
 	
 	@Override 
 	public void preStart() {
-		Node e = Dijkstra.searchGraph(Dijkstra.TransportPaths, start.getPositionX()+":"+start.getPositionY(), stop.getPositionX()+":"+stop.getPositionY());
+		AbstractNode e = Dijkstra.searchGraph(Dijkstra.TransportPaths, start.getPositionX()+":"+start.getPositionY(), stop.getPositionX()+":"+stop.getPositionY());
 		
 		
 		ResourceMessages.ResourcePath.Builder msg = ResourceMessages.ResourcePath.newBuilder();
-		while(e!=null && e!=Node.TERMINAL_NODE) {
+		while(e!=null && e!=AbstractNode.TerminalNode.TERMINAL_NODE) {
 			msg.addPath(0, resourcePositionDB.get(e.getId()));
 			e = e.getSelectedSource();
 		}
