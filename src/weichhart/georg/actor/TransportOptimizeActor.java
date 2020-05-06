@@ -9,8 +9,8 @@ import akka.japi.pf.ReceiveBuilder;
 import weichhart.georg.communication.ResourceMessages;
 import weichhart.georg.communication.ResourceMessages.Resource;
 import weichhart.georg.dijkstra.Dijkstra;
-import weichhart.georg.dijkstra.Node;
-import weichhart.georg.minHeap.AbstractNode;
+import weichhart.georg.network.AbstractNode;
+import weichhart.georg.network.Node;
 
 public class TransportOptimizeActor extends AbstractActor {
 	Resource start;

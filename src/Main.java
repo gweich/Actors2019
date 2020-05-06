@@ -7,8 +7,8 @@ import weichhart.georg.actor.OrderActor;
 import weichhart.georg.actor.PlotterActor;
 import weichhart.georg.actor.TransportActor;
 import weichhart.georg.dijkstra.Dijkstra;
-import weichhart.georg.dijkstra.Edge;
-import weichhart.georg.dijkstra.Node;
+import weichhart.georg.network.Edge;
+import weichhart.georg.network.Node;
 
 public class Main {
 	
