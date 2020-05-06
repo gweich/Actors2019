@@ -31,7 +31,7 @@ public class TransportOptimizeActor extends AbstractActor {
 		
 		
 		ResourceMessages.ResourcePath.Builder msg = ResourceMessages.ResourcePath.newBuilder();
-		while(e!=null && e!=AbstractNode.TerminalNode.TERMINAL_NODE) {
+		while(e!=null && e!=AbstractNode.TERMINAL_NODE) {
 			msg.addPath(0, resourcePositionDB.get(e.getId()));
 			e = e.getSelectedSource();
 		}
